@@ -1,4 +1,9 @@
-<div>
-  <h1 class="font-bold text-4xl">Groups#index</h1>
-  <p>Find me in app/views/groups/index.html.erb</p>
-</div>
+<% if current_user.nil? %>
+  <%= render 'shared/splash_screen' %>
+<% else %>
+  <%= render partial: 'shared/navbar', locals: { page_title: 'Groups', left_button: 'Logout', right_button: 'Search'} %>
+  <div>
+    <h1 class="font-bold text-4xl">Groups#index</h1>
+    <p>Find me in app/views/groups/index.html.erb</p>
+  </div>
+<% end %>
