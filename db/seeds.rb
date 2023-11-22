@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+# purchase = Purchase.create(name: 'shirt', author: user, amount: 2)
+# group = Group.create(name: 'Mcdonalds', icon: 'icon.jpg', author: user)
+# group.purchases << purchase
