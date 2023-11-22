@@ -10,7 +10,7 @@ gem "rails", "~> 7.0.8"
 gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
-gem "pg", "~> 1.1"
+gem 'pg', '~> 1.5', '>= 1.5.4'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -42,6 +42,10 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+gem 'rubocop', '>= 1.0', '< 2.0'
+
+gem 'devise'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -51,6 +55,8 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'rspec-rails'
+  gem 'webdrivers'
 end
 
 group :development do
@@ -68,5 +74,6 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-
 end
+
+gem 'tailwindcss-rails', '~> 2.0'
