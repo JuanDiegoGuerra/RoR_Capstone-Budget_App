@@ -7,5 +7,5 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # purchase = Purchase.create(name: 'shirt', author: user, amount: 2)
-# group = Group.create(name: 'Mcdonalds', icon: 'icon.jpg', author: user)
+# group = Group.create(name: 'Mcdonalds', icon: 'https://es.logodownload.org/wp-content/uploads/2018/11/McDonalds-logo-11.png', author: user)
 # group.purchases << purchase
