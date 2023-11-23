@@ -1,0 +1,26 @@
+<%= render partial: 'shared/navbar', locals: { page_title: 'ADD TRANSACTION', left_button: group_path(params[:group_id]), right_button: 'Search'} %>
+<%= form_with model: @purchase, url: group_purchases_path(params[:group_id]), method: :post do |f| %>
+  <div class="shadow-sm bg-white">
+    <div class="bg-gray-200 border border-gray-300 flex items-center justify-center h-9">
+        <h2 class="font-bold text-gray-500">NEW TRANSACTION</h2>
+    </div>
+    <div class="opacity-40 w-11/12 mx-auto">
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "TRANSACTION NAME", class: "w-full py-3 border-none" %>
+    </div>
+
+    <div class="opacity-40 w-11/12 mx-auto pb-6">
+        <%= f.number_field :amount, autofocus: true, step: "any", autocomplete: "amount", placeholder: "AMOUNT", class: "w-full py-3 border-x-white" %>
+    </div>
+    <ul class="opacity-40 w-5/6 mx-auto pb-6">
+        <% @groups.each do |group| %>
+            <li class="flex items-center gap-4 mb-1">
+                <%= check_box_tag 'purchase[group_ids][]', group.id %>
+                <p><%= group.name %></p>
+            </li>
+        <% end %>
+    </ul>
+  </div>
+  <div class="absolute bottom-0 w-full bg-secondGreen flex items-center justify-center h-16">
+    <%= f.submit 'SAVE TRANSACTION', class:"border-solid border-white py-1 border-2 cursor-pointer w-11/12 text-white font-light text-lg" %>
+  </div>
+<% end %>

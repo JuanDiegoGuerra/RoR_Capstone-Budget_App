@@ -1,0 +1,23 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= render partial: 'shared/navbar', locals: { page_title: 'SIGN IN', left_button: root_path, right_button: f.submit("Log in") } %>
+  <div class="opacity-50 shadow-sm bg-white mt-4 border-y-2">
+    <div class="w-11/12 mx-auto">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: "w-full py-3 border-none" %>
+    </div>
+
+    <div class="w-11/12 mx-auto">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "w-full py-3 border-x-white" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="w-11/12 mx-auto my-4">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<div class="text-center mt-4 opacity-50">
+  <%= render "devise/shared/links" %>
+</div>
