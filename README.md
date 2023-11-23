@@ -1,6 +1,8 @@
 <a name="readme-top"></a>
 
 <div align="center">
+    <img src="app\assets\images\budgetapp_logo.JPG" alt="logo" width="150"  height="auto" 
+    style="border-radius: 15%;border: 3px red solid;"/>
   <h1><b>Budget App</b></h1><a name="about-project"></a>
 </div>
 
