@@ -1,20 +1,22 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render partial: 'shared/navbar', locals: {page_title: 'Sign Up', left_button: 'Back', right_button: f.submit("Sign up") } %>
+  <%= render partial: 'shared/navbar', locals: {page_title: 'REGISTER', left_button: root_path , right_button: f.submit("Sign up") } %>
   <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="shadow-sm bg-white mt-4 border-y-2">
+    <div class="opacity-50 w-11/12 mx-auto">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full Name", class: "w-full py-3 border-none" %>
+    </div>
 
-  <div class="">
-    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full Name", class: "w-full" %>
-  </div>
-  <div class="field">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "w-full" %>
-  </div>
+    <div class="opacity-50 w-11/12 mx-auto">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "w-full py-3 border-x-white" %>
+    </div>
 
-  <div class="field">
-    <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password (6 characters minimun)', class: "w-full" %>
-  </div>
+    <div class="opacity-50 w-11/12 mx-auto">
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password (6 characters minimun)', class: "w-full py-3 border-x-white border-t-white" %>
+    </div>
 
-  <div class="field">
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Password Confirmation', class: "w-full" %>
+    <div class="opacity-50 w-11/12 mx-auto">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Password Confirmation', class: "w-full py-3 border-none" %>
+    </div>
   </div>
 
 <% end %>

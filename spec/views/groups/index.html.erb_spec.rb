@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Groups', type: :system do
   describe 'Index page' do
     let!(:user) do
-      User.create(name: 'Luis', email: 'luis@gmail.com', password: 'password', password_confirmation: 'password')
+      User.create(name: 'Juan', email: 'juan@gmail.com', password: 'password', password_confirmation: 'password')
     end
 
     let!(:group) do
