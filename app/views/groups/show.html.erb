@@ -1,0 +1,29 @@
+<%= render partial: 'shared/navbar', locals: { page_title: 'TRANSACTIONS', left_button: groups_path, right_button: 'Search'} %>
+
+<section class='w-11/12 m-auto bg-white shadow-md mb-20'>
+    <div class="w-11/12 mt-5 m-auto pt-5">
+        <div class="flex gap-4 items-center border-b pb-6 relative">
+            <img src='<%= @group.icon %>' alt='Group Icon' class="w-24 h-16">
+            <h2 class="text-left break-words text-gray-500 text-lg"><%= @group.name %></h2>
+            <%= button_to "Remove", @group, method: :delete, class:"absolute top-0 underline opacity-40 right-2 text-gray-600 text-sm" %>
+        </div>
+    </div>
+    <div class="flex justify-between items-center py-4 border-b w-11/12 m-auto">
+        <p class="text-textGray">TOTAL PAYMENT</p>
+        <p class="font-bold text-textGray">$<%= total_purchases(@group) %></p>
+    </div>
+    <ul>
+        <% @group.purchases.each do |purchase| %>
+            <li class="flex justify-between w-11/12 m-auto py-4 border-b">
+                <p class="text-left break-words text-gray-500"><%= purchase.name %></p>
+                <p class="text-gray-500">$<%= purchase.amount %></p>
+            </li>
+        <% end %>
+    </ul>
+</section>
+
+<div class="fixed bottom-0 flex items-center w-full justify-center bg-secondGreen h-16">
+    <a href="<%= new_group_purchase_path(@group.id) %>" class="w-11/12">
+      <button class="border-white border-2 w-full py-1 text-white font-light text-lg">ADD NEW TRANSACTION</button>
+    </a>
+</div>

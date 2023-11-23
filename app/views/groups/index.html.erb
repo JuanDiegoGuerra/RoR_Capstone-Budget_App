@@ -1,11 +1,11 @@
 <% if current_user.nil? %>
   <%= render 'shared/splash_screen' %>
 <% else %>
-  <%= render partial: 'shared/navbar', locals: { page_title: 'Categories', left_button: 'Logout', right_button: 'Search'} %>
-  <div class="">
-    <ul class="flex flex-col gap-3 w-11/12 m-auto mt-4">
+  <%= render partial: 'shared/navbar', locals: { page_title: 'CATEGORIES', left_button: 'Logout', right_button: 'Search'} %>
+  <div>
+    <ul class="flex flex-col gap-3 w-11/12 m-auto mt-4 pb-20">
       <% @groups.each do |group| %>
-        <a href="#">
+        <a href="<%= group_path(group.id) %>">
           <li class="bg-white flex items-start p-5 justify-between shadow-md h-28">
             <div class="flex gap-3">
               <img src='<%= group.icon %>' alt='Group Icon' class="w-24 h-16">
@@ -20,9 +20,9 @@
       <% end %>
     </ul>
 
-    <div class="absolute bottom-0 flex items-center w-full justify-center bg-secondGreen h-16">
+    <div class="bottom-0 fixed flex items-center w-full justify-center bg-secondGreen h-16">
       <a href="<%= new_group_path %>" class="w-11/12">
-        <button class="border-white border-2 w-full py-1 text-white font-light text-lg">Add a New Category</button>
+        <button class="border-white border-2 w-full py-1 text-white font-light text-lg">ADD A NEW CATEGORY</button>
       </a>
     </div>
   </div>

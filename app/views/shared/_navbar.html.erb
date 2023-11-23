@@ -1,8 +1,8 @@
 <div class="bg-mainBlue text-white w-full h-14 flex place-items-center justify-between px-4">
     <% if left_button == 'Logout' %>
         <%= link_to 'Log Out', destroy_user_session_path, 'data-turbo-method': :delete %>
-    <% elsif left_button == 'Back' %>
-        <%= link_to 'Back', :back %>
+    <% elsif left_button.present? %>
+        <%= link_to 'Back', left_button %>
     <% else %>
         <div></div>
     <% end %>
