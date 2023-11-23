@@ -1,0 +1,18 @@
+<%= form_with model: @group, url: groups_path, method: :post do |f| %>
+  <%= render partial: 'shared/navbar', locals: {page_title: 'ADD CATEGORY', left_button: 'Back', right_button: 'Search' } %>
+  <div class="shadow-sm bg-white">
+    <div class="bg-gray-200 border border-gray-300 flex items-center justify-center h-9">
+        <h2 class="font-bold text-gray-500"> NEW CATEGORY </h2>
+    </div>
+    <div class="opacity-40 w-11/12 mx-auto">
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "CATEGORY NAME", class: "w-full py-3 border-none" %>
+    </div>
+
+    <div class="opacity-40 w-11/12 mx-auto pb-6">
+        <%= f.text_field :icon, autofocus: true, autocomplete: "Icon", placeholder: "ICON URL", class: "w-full py-3 border-x-white" %>
+    </div>
+  </div>
+  <div class="absolute bottom-0 w-full bg-secondGreen flex items-center justify-center h-16">
+    <%= f.submit 'ADD CATEGORY', class:"border-solid border-white py-1 border-2 cursor-pointer w-11/12 text-white font-light text-lg" %>
+  </div>
+<% end %>
