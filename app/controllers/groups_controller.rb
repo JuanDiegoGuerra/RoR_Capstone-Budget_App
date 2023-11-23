@@ -1,4 +1,4 @@
-class GroupsController < ApplicationController  
+class GroupsController < ApplicationController
   def index
     return unless current_user
 
@@ -41,4 +41,4 @@ class GroupsController < ApplicationController
   def group_params
     params.require(:group).permit(:name, :icon)
   end
-  end
+end
