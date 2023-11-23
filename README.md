@@ -24,6 +24,7 @@
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [🎨 Highlights ](#-highlights-)
   - [❓ FAQ ](#-faq-)
   - [📝 License ](#-license-)
 
@@ -186,6 +187,12 @@ If you like this project,please give it a ⭐️!
 I would like to thank Microverse for giving me the opportunity to learn and grow as a developer and also I like to thank my family, they are all my support. 🌟
 
 > Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🎨 Highlights <a name="highlights"></a>
+
+I would like to highlight an interesting piece of code related to my project and it is the fact that I integrated Tailwind CSS for the styling of the app.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
